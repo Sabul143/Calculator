@@ -1,0 +1,106 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #33ccff, #cc0099 )
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 85px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 85px);
+    margin-top: 20px ;
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, .75);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin: 5px;
+}
+.calculator-grid > button:hover{
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two-equal {
+    grid-column: span 2;
+}
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-wrap: break-all;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    outline: none;
+    box-shadow: inset 15px -5px -5px #Fff,
+                     15px 5px 5px rgba(0, 0, 0, .16);
+}
+
+.output .previous-operand{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+}
+.output .current-operand{
+    color: rgba(255, 255, 255);
+    font-size: 2.5rem;
+}
+
+.calculator-grid .bg-yellow {
+    background-color: rgb(255, 136, 0);
+}
+.calculator-grid .ac{
+    background-color: red;
+}
+
+.calculator-grid .span-two-equal {
+    background-color: green;
+    border-radius: 20px;
+}
+.calculator-grid .del {
+    background-color: blue;
+}
+
+.container{
+    height: 620px;
+    width: 390px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: dimgray;
+    box-shadow: inset 10px 10px 15px #Fff,
+                inset -10px 10px 15px #Fff,
+                10px 10px 15px rgba(0, 0, 0, .16);
+  }
+
+
+  @media (max-width:1199px) 
+  {
+    .calculator-grid {
+        min-height: 135vh;
+     }
+  }
+
+  @media (max-width:1330px) 
+  {
+    .calculator-grid {
+        min-height: 135vh;
+     }
+  }
+
+  
